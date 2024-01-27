@@ -2,7 +2,6 @@ clear
 clc
 close all
 
-current_time = 0;
 current_height = 0;
 current_vel = 0;
 current_pitch = 0;
