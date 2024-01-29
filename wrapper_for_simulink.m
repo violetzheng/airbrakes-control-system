@@ -5,6 +5,7 @@ close all
 current_height = 0;
 current_vel = 0;
 current_pitch = 0;
+extension_length = 0;
 
 sim('ver1_3DOF_draft2.slx');
 heightSignal = ans.yout.getElement('height');
