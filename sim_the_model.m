@@ -24,6 +24,7 @@ function res = sim_the_model(args)
 % By: Murali Yeddanapudi, 20-Feb-2022
 
 arguments
+    args.StartTime (1,1) double = nan
     args.StopTime (1,1) double = nan
     args.TunableParameters = []
     args.ExternalInput (1,:) {mustBeNumericOrLogical} = []
@@ -39,7 +40,7 @@ end
     
     %% Load the StopTime into the SimulationInput object
     if ~isnan(args.StopTime)
-        si = si.setModelParameter('StopTime', num2str(args.StopTime));
+        si = si.setModelParameter('StopTime', num2str(args.StopTime),'StartTime',num2str(args.StartTime));
     end
     
     %% Load the specified tunable parameters into the simulation input object

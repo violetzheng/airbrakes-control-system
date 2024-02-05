@@ -16,5 +16,5 @@ velocity = velocitySignal.Values.Data;
 
 figure
 plot(t,height)
-plot(t,velocity)
+%plot(t,velocity)
 
